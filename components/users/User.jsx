@@ -12,7 +12,7 @@ class User extends PureComponent {
 }
 
 User.propTypes = {
-  user: PropTypes.object.isRequired,
+  user: PropTypes.objectOf.isRequired,
 };
 
 export default User;

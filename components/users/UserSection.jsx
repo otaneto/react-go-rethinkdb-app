@@ -17,10 +17,10 @@ class UserSection extends PureComponent {
       </div>
     );
   }
-} 
+}
 
 UserSection.propTypes = {
-  users: PropTypes.array.isRequired,
+  users: PropTypes.arrayOf(PropTypes.object).isRequired,
   setUserName: PropTypes.func.isRequired,
 };
 
