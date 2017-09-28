@@ -20,12 +20,16 @@ class App extends Component {
     this.setState({ activeChannel });
   }
   setUserName = (name) => {
-    const { users } = this.state;
+    let { users } = this.state;
     users.push({ id: users.length, name });    
     this.setState({ users });
   }
   addMessage = (body) => {
-    
+    let { messages, users } = this.state;
+    const createdAt = new Date;
+    const author = users.length > 0 ? users[0].name : 'anonymous';
+    messages.push({ id: messages.length, body, createdAt, author });
+    this.setState({ messages });
   }
   render() {
     const { activeChannel, channels, messages, users  } = this.state;

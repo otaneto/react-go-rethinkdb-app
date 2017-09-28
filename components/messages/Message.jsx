@@ -14,7 +14,7 @@ class Message extends PureComponent {
         </div>
         <div className="body">{message.body}</div>
       </li>
-    )
+    );
   }
 }
 

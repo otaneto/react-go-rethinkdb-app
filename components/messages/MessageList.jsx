@@ -8,7 +8,10 @@ class MessageList extends PureComponent {
       <ul>
         {
           this.props.messages.map(message => (
-            <Message key={message.id} message={message} />
+            <Message
+              key={message.id}
+              message={message}
+            />
           ))
         }
       </ul>

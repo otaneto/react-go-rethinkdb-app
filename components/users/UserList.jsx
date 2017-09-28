@@ -20,7 +20,7 @@ class UserList extends PureComponent {
 }
 
 UserList.propTypes = {
-  users: PropTypes.array.isRequired,
+  users: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default UserList;

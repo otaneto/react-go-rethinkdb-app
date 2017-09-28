@@ -18,6 +18,9 @@
   height: 50vh;
   margin-bottom: 0;
 }
+.support panel {
+  margin-bottom: 0;
+}
 .channels, .users, .messages{
   display: flex;
   flex-direction: column;
