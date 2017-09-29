@@ -4,23 +4,24 @@ import PropTypes from 'prop-types';
 class UserForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
-    const node = this.refs.userName;
+    const node = this.userName;
     const userName = node.value;
     this.props.setUserName(userName);
     node.value = '';
   }
-  render(){
+  render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <div className='form-group'>
-          <input 
-            ref='userName'
-            type='text' 
-            className='form-control' 
-            placeholder='Set Your Name...' />
+        <div className="form-group">
+          <input
+            ref={(c) => { this.userName = c; }}
+            type="text"
+            className="form-control"
+            placeholder="Set Your Name..."
+          />
         </div>
       </form>
-    )
+    );
   }
 }
 

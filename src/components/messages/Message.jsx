@@ -19,7 +19,12 @@ class Message extends PureComponent {
 }
 
 Message.propTypes = {
-  message: PropTypes.object.isRequired,
+  message: PropTypes.shape({
+    id: PropTypes.number,
+    body: PropTypes.string,
+    createdAt: PropTypes.Date,
+    author: PropTypes.string,
+  }).isRequired,
 };
 
 export default Message;

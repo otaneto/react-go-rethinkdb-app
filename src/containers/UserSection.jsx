@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import UserForm from './UserForm';
-import UserList from './UserList';
+import UserForm from '../components/users/UserForm';
+import UserList from '../components/users/UserList';
 
 class UserSection extends PureComponent {
   render() {

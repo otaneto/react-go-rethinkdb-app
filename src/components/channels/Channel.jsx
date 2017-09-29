@@ -13,7 +13,11 @@ class Channel extends Component {
     const active = channel === activeChannel ? 'active' : '';
     return (
       <li className={active}>
-        <a onClick={this.handleClick}>
+        <a
+          onClick={this.handleClick}
+          role="button"
+          tabIndex={0}
+        >
           {channel.name}
         </a>
       </li>
@@ -22,9 +26,15 @@ class Channel extends Component {
 }
 
 Channel.propTypes = {
-  activeChannel: PropTypes.object.isRequired,
-  channel: PropTypes.object.isRequired,
+  activeChannel: PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+  }).isRequired,
+  channel: PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+  }).isRequired,
   setChannel: PropTypes.func.isRequired,
-}
+};
 
 export default Channel;

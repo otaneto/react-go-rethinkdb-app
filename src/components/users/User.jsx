@@ -12,7 +12,10 @@ class User extends PureComponent {
 }
 
 User.propTypes = {
-  user: PropTypes.objectOf.isRequired,
+  user: PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+  }).isRequired,
 };
 
 export default User;

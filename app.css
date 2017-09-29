@@ -36,9 +36,9 @@
   flex: 1;
   overflow-y: auto;
 }
-.message{
-  /*display: flex;*/
-}
+/* .message{
+  display: flex;
+} */
 .message > .author{
   flex-basis: 100%;
 }

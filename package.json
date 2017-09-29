@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack && webpack-dev-server --hot --inline --port 3000",
-    "lint": "esw -c .eslintrc src --ext .js,.jsx --color"
+    "lint": "esw -c .eslintrc components --ext .js,.jsx --color"
   },
   "author": "Otacílio Neto",
   "license": "ISC",
@@ -13,7 +13,8 @@
     "fecha": "^2.3.1",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react-dom": "^16.0.0",
+    "redux": "^3.7.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

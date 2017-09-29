@@ -19,7 +19,7 @@ class MessageList extends PureComponent {
   }
 }
 MessageList.propTypes = {
-  messages: PropTypes.array.isRequired,
+  messages: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default MessageList;

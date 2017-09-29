@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import ChannelSection from './channels/ChannelSection';
-import UserSection from './users/UserSection';
-import MessageSection from './messages/MessageSection';
+import ChannelSection from './containers/ChannelSection';
+import UserSection from './containers/UserSection';
+import MessageSection from './containers/MessageSection';
 
 class App extends Component {
   state = {

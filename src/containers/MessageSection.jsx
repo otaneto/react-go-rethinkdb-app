@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import MessageList from './MessageList';
-import MessageForm from './MessageForm';
+import MessageList from '../components/messages/MessageList';
+import MessageForm from '../components/messages/MessageForm';
 
 class MessageSection extends PureComponent {
   render() {
@@ -21,9 +21,12 @@ class MessageSection extends PureComponent {
 }
 
 MessageSection.propTypes = {
-  activeChannel: PropTypes.object.isRequired,
+  activeChannel: PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+  }).isRequired,
   addMessage: PropTypes.func.isRequired,
-  messages: PropTypes.array.isRequired,
+  messages: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default MessageSection;
